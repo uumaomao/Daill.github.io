@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>index</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/index.css">
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/hover.js"></script>
+<script>
+window.onload= function () {
+    var imgHover1 = new sHover("imgBox","imgCover");
+    imgHover1.set({
+        //速度，0-10
+        speed:7,
+        //透明度0-100
+        opacity:80,
+        //淡入淡出
+        opacityChange:true
+    });
+    // 悬浮导航效果
+    var oTopNav=document.getElementById('topNav');
+    window.onscroll=function(){
+        console.log(1);
+        var scrollTop=document.documentElement.scrollTop || document.body.scrollTop;
+        if(scrollTop>=10){
+            oTopNav.className='topNav fixed';
+        }else{
+            oTopNav.className='topNav';
+        }
+    }
+}
+</script>
+</head>
+<body>
+<div class="index">
+	<!--背景音乐-->
+	<audio src="img/Charlie Puth - Look At Me Now.mp3" autoplay loop></audio>
+    <div class="topNav" id="topNav">
+       <div class="head">
+            <ul class="nav clear">
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#skills">我的技能</a></li>
+                <li><a href="#cases">作品展示</a></li>
+                <li><a href="#works">工作经验</a></li>
+                <li><a href="#contact">联系我</a></li>
+            </ul>
+        </div> 
+    </div>
+    <div class="banner" id="about">
+        <div class="bannerBox">&nbsp;</div>
+        <div class="bannerCon clear">
+            <div class="photo"><img src="img/photo.png" alt=""></div>
+            <div class="userRight">
+                <h2>前端工程师</h2>
+                <p>姓名：代丽丽<br/>年龄：25</p>
+                <p class="main">90后，具有两年的前端工作经验，已经独立
+                    参与整站的前端制作工作，熟练的和相关的部门合作以及
+                    沟通，熟练前后端的交互，最大的优点就是工作可以立即
+                    上手。<br/>已有较多的线上pc和移动端作品，接触的网站种类有教育的，医学的，社区类...</p>
+            </div>
+            <!-- <div class="mouse">下面更精彩</div> -->
+        </div>
+    </div>
+    <!--第二屏幕-->
+    <div class="con02" id="skills">
+        <div class="title">
+            <h3>我的技能</h3>
+            <p>my skills</p>
+        </div>
+        <div class="down">
+            <ul>
+                <li>
+                    <h4>Html&Css</h4>
+                    <p>熟练掌握以及操作html和css,能够快速高效的完成页面的制作，能熟练运用CSS完成各种类型的网页布局，包括当前流行的响应式布
+                        局。对使用CSS3提升用户体验有浓厚兴趣，喜欢使用CSS3解决过去js达到的效果，曾经常在实际项目中实践(如:transiton、
+                        keyframes等)</p>
+                </li>
+                <li>
+                    <h4>Javascript&Jquery</h4>
+                    <p>熟练JavaScript原生编程，对面向对象编程有丰富经验，可进行高效模块化开发，并保证良好复用和维护性。可熟练使用MVC框架
+                        (如BackBone.js)进行复杂单页面应用开发。对编写jQuery组件有丰富经验。</p>
+                </li>
+                <li>
+                    <h4>移动端开发</h4>
+                    <p>熟练掌握html5和css3的相关操作，已经成功独立的开发出移动端的网页，并且适配不同的客户端。熟练应用h5语义化标签。</p>
+                </li>
+                <li>
+                    <h4>其他技能</h4>
+                    <p>1.熟练操作svn和git，能够快速的进入工作状态。<br/>
+                       2.熟练掌握bootstrap的使用，已经使用此框架开发一个整站。<br/>
+                       3.熟悉php和java后台语言，与后台配合良好。</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="con3" id="cases">
+        <div class="con02">
+            <div class="title cases">
+                <h3>我的作品</h3>
+                <p>my cases</p>
+            </div>
+            <div class="down">
+                <!--第一排-->
+                <ul class="caseShow clear">
+                    <li class="imgBox">
+                        <a href="http://www.allinmd.cn/">
+                            <img src="img/allinmd.png" alt="">
+                            <div class="imgCover bgColor1">
+                                <div class="imgText">
+                                    <p class="it_name">唯医</p>
+                                    <p>专业医生互动与医学教育平台(allinmd.cn)</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="imgBox" style="margin-top:-67px;">
+                        <a href="http://www.medplus.net/">
+                            <img src="img/medplus.png" alt="">
+                            <div class="imgCover bgColor2">
+                                <div class="imgText">
+                                    <p class="it_name">医栈</p>
+                                    <p>骨科产业技术教育及器械产品展示互动平台</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="imgBox" style="margin-top:-134px;">
+                        <a href="http://usa.liuxue315.edu.cn/">
+                            <img src="img/liuxue315-a-index.png" alt="">
+                            <div class="imgCover bgColor3">
+                                <div class="imgText">
+                                    <p class="it_name">留学监理网-美国专题</p>
+                                    <p>中国唯一的留学中介监理服务平台</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="imgBox" style="margin-top:-201px;">
+                        <a href="http://usa.liuxue315.edu.cn/">
+                            <img src="img/liuxue315-A.png" alt="">
+                            <div class="imgCover bgColor4">
+                                <div class="imgText">
+                                    <p class="it_name">留学监理网-美国专题</p>
+                                    <p>中国唯一的留学中介监理服务平台</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!--第二排-->
+                <ul class="caseShow clear caseShow2">
+                    <li class="imgBox" style="margin-top:40px;">
+                        <a href="http://www.liuxue315.edu.cn/">
+                            <img src="img/liuxue315.png" alt="">
+                            <div class="imgCover bgColor5">
+                                <div class="imgText">
+                                    <p class="it_name">留学监理网</p>
+                                    <p>中国唯一的留学中介监理服务平台</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="imgBox" style="margin-top: -27px;">
+                        <a href="http://m.medplus.net/">
+                            <img src="img/medplusWeb.png" alt="">
+                            <div class="imgCover bgColor6">
+                                <div class="imgText">
+                                    <p class="it_name">医栈web</p>
+                                    <p>骨科产业技术教育及器械产品展示互动平台</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="imgBox" style="margin-top:-94px;">
+                        <a href="http://www.newgoal.cn/">
+                            <img src="img/nugol.png" alt="">
+                            <div class="imgCover bgColor7">
+                                <div class="imgText">
+                                    <p class="it_name">牛果网教育问答社区</p>
+                                    <p>国内唯一的融合留学问答与留学小组的垂直互动社区</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="imgBox" style="margin-top:-161px;">
+                        <a href="http://www.dali.edu.cn/">
+                            <img src="img/dl.png" alt="">
+                            <div class="imgCover bgColor8">
+                                <div class="imgText">
+                                    <p class="it_name">大理大学</p>
+                                    <p>云南省属综合性大学，“卓越医生教育培养计划”试点高校</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 我的就业经历 -->
+    <div class="con02" id="works">
+        <div class="title">
+            <h3>工作经验</h3>
+            <p>my history</p>
+        </div>
+        <div class="down">
+            <ul class="wordList clear">
+            	<li>
+                    <div class="listL">
+                        <a href="javascript:;"><img src="img/work03.jpg" alt=""></a>
+                        <span class="listMask">北京通元动力软件技术有限责任公司</span>
+                    </div>
+                    <div class="listR">
+                        <div class="rTitle">前端工程师</div>
+                        <div class="rCon">
+                            北京通元动力软件技术有限责任公司<br/>
+                            工作时间：2013.11-2014.2<br/>
+                            工作职责：配合产品，后台，实现整体的设计和页面制作和功能<br/>
+                            参与项目：大理大学主站，北京医科大学主站，北京清华长庚医院主站，北京大学主站招标......<br/>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="listL" style="float: right;">
+                        <a href="javascript:;"><img src="img/work01.png" alt=""></a>
+                        <span class="listMask">留学监理网前端工程师</span>
+                    </div>
+                    <div class="listR" style="float: left;">
+                        <div class="rTitle">前端工程师</div>
+                        <div class="rCon">
+                            留学监理网<br/>
+                            工作时间：2014.2-2015.3<br/>
+                            工作职责：配合产品，后台，设计实现前端页面以及功能<br/>
+                            参与项目：牛果网日常维护，监理网日常维护以及模块的更新，添加，新版监理网的设计和前端页面功能的实现<br/>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="listL">
+                        <a href="javascript:;"><img src="img/work02.jpg" alt=""></a>
+                        <span class="listMask">北京欧应信息技术有限公司-前端工程师</span>
+                    </div>
+                    <div class="listR">
+                        <div class="rTitle">前端工程师</div>
+                        <div class="rCon">
+                            北京欧应信息技术有限公司<br/>
+                            工作时间：2015.3-至今<br/>
+                            工作职责：配合设计，产品，后台实现前端页面以及数据交互<br/>
+                            参与项目：唯医网部分模块的添加，后台模板的维护，移动端页面的实现，医栈整体网站的实现和维护更新，配合app推广的h5页面制作和交互<br/>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer_wrap" id="contact">
+        <div class="footer">
+            <div class="title" style="text-align:left;">
+                <h3>联系我</h3>
+                <p>contact me</p>
+            </div>
+            <div class="down">
+                <ul>
+                    <li><span>Name</span>代丽丽</li>
+                    <li><span>Email:</span>dailili0624@126.com</li>
+                    <li><span>QQ:</span>89318227</li>
+                    <li><span>Tel:</span>13522541474</li>
+                </ul> 
+                <span class="imgFooter"><img src="img/adress.jpg" alt="" /></span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
