@@ -1,0 +1,229 @@
+@charset "utf-8";
+/* 禁用iPhone中Safari的字号自动调整 */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+/* 去除iPhone中默认的input样式 */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input{-webkit-appearance:none; resize: none;}
+
+/* 取消链接高亮  */
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article, 
+aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); }
+/* 设置HTML5元素为块 */
+article, aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section {
+	display: block;
+}
+/* 图片自适应 */
+img {
+	max-width: 100%;
+	height: auto;
+	width:auto\9; /* ie8 */
+	-ms-interpolation-mode:bicubic;/*为了照顾ie图片缩放失真*/
+	display: block;
+  border: 0;
+}
+/* 初始化 */
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article, 
+aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section{margin:0; padding:0; border:none;}
+body{font-family:Microsoft YaHei,Tahoma,Arial,sans-serif;font-size: 100%;}
+address,em,i{font-style:normal;}/*斜体扶正*/
+strong{font-weight: normal;}
+a{text-decoration:none; color:#333; font-family:Microsoft YaHei,Tahoma,Arial,sans-serif;}
+a:hover{text-decoration:none;}
+ul,ol{list-style:none;}
+h1, h2, h3, h4, h5, h6{ font-size:100%; font-family:Microsoft YaHei;font-weight: normal;}
+img{border: none;}
+
+/*统一所有input的某些样式*/
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/*修改默认input的placeholder（看情况使用）*/
+input::-webkit-input-placeholder {
+　　color: #999 !important; /* WebKit browsers */
+　　}
+input:-moz-placeholder {
+　　color: #999 !important; / Mozilla Firefox 4 to 18 /
+　　}
+input::-moz-placeholder {
+　　color: #999 !important; / Mozilla Firefox 19+ /
+　　}
+input:-ms-input-placeholder {
+　　color: #999 !important; / Internet Explorer 10+ */
+　　}
+textarea{
+	resize:none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*公共样式的设定*/
+.fontYh{
+	font-family:Microsoft YaHei;
+}
+.bgW{
+	background-color: #fff;
+}
+/*.clear{
+	display:block;
+	font-size:0;
+	line-height:0;
+	clear:both;
+}*/
+.clear:after{
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.clear{
+	zoom:1;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+/*常用字号设置*/
+.font14{
+	font-size:14px;
+}
+.font16{
+	font-size:16px;
+}
+.font18{
+	font-size:18px;
+}
+.fontN{
+	font-weight:normal;
+}
+.fontB{
+	font-weight:bold;
+}
+.hide{
+  display: none;
+}
+.bgF{
+    background: #f0f5f8;
+}
+/*兼容移动端字号自适应*/
+/* 新版css **/
+
+@media (max-width: 300px) {
+    body {
+        font-size: 40%;
+    }
+}
+@media (min-width: 300px) and (max-width: 350px) {
+    body {
+        font-size: 50%;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 400px) {
+    body {
+        font-size: 58%;
+    }
+
+}
+
+@media (min-width: 400px) and (max-width: 450px) {
+    body {
+        font-size: 64%;
+    }
+
+}
+
+@media (min-width: 450px) and (max-width: 500px) {
+    body {
+        font-size: 72%;
+    }
+
+}
+
+@media (min-width: 500px) and (max-width: 550px) {
+    body {
+        font-size: 80%;
+    }
+
+}
+
+@media (min-width: 550px) and (max-width: 600px) {
+    body {
+        font-size: 88%;
+    }
+
+}
+
+@media (min-width: 600px) and (max-width: 650px) {
+    body {
+        font-size: 96%;
+    }
+
+}
+
+@media (min-width: 650px) and (max-width: 700px) {
+    body {
+        font-size: 104%;
+    }
+
+}
+
+@media (min-width: 700px) and (max-width: 750px) {
+    body {
+        font-size: 112%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
